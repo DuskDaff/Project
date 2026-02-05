@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu HTML - Pengumpulan Project Podcast & Video</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: linear-gradient(to right, #f9f9f9 1px, transparent 1px), 
+                              linear-gradient(to bottom, #f9f9f9 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            border-left: 5px solid #8e8e8e;
+        }
+        
+        h1 {
+            color: #444;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, #b0b0b0, #e0e0e0);
+        }
+        
+        .subtitle {
+            color: #777;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+        
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .menu-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #d0d0d0;
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-header {
+            padding: 20px;
+            background: #f8f8f8;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .menu-header i {
+            font-size: 1.8rem;
+            color: #8a8a8a;
+            margin-right: 15px;
+        }
+        
+        .menu-header h3 {
+            color: #555;
+            font-size: 1.4rem;
+            display: inline-block;
+        }
+        
+        .menu-content {
+            padding: 20px;
+        }
+        
+        .menu-content ul {
+            list-style-type: none;
+        }
+        
+        .menu-content li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .menu-content li:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-content a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.2s;
+            flex-grow: 1;
+        }
+        
+        .menu-content a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+        
+        .badge {
+            background: #f0f0f0;
+            color: #777;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .description {
+            color: #888;
+            font-style: italic;
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            color: #777;
+            margin-top: 20px;
+        }
+        
+        .highlight {
+            color: #666;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-bars"></i> Menu Navigasi HTML</h1>
+            <p class="subtitle">Pengumpulan Tugas Informatika Kelas X ULP 2 Semester 2.</p>
+        </header>
+        
+        <div class="menu-container">
+            <!-- Menu Navigasi Utama -->
+            <div class="menu-card">
+                <div class="menu-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Podcast Dan Video</h3>
+                </div>
+                <div class="menu-content">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-circle"></i> Podcast</a>
+                            <span class="badge">3 Kelompok</span>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-circle"></i> Video</a><span class="badge"> 6 Kelompok</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i> Instagram : @X - ULP 2
+                            <li> 
+                            <i class="fas fa-envelope"></i>Youtube : @XULP2-28</li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    <script>
+        // Menambahkan interaksi sederhana pada menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-content a');
+            
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // Mencegah navigasi sebenarnya (karena link hanya contoh)
+                    e.preventDefault();
+                    
+                    // Animasi klik sederhana
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                    
+                    // Tampilkan pesan
+                    const itemText = this.textContent.trim();
+                    alert(`Anda mengklik: ${itemText}\n\nIni hanya contoh menu. Di implementasi nyata, ini akan mengarahkan ke halaman yang sesuai.`);
+                });
+            });
+            
+            // Efek hover untuk kartu menu
+            const menuCards = document.querySelectorAll('.menu-card');
+            menuCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.menu-header i');
+                    icon.style.transform = 'rotate(10deg) scale(1.1)';
+                    icon.style.transition = 'transform 0.3s ease';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.menu-header i');
+                    icon.style.transform = 'rotate(0deg) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
